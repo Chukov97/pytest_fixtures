@@ -36,7 +36,7 @@ def test_github_desktop(browser_management):
             browser.config.window_height == config.window_height_mobile_1) or (
             browser.config.window_width == config.window_width_mobile_2 and
             browser.config.window_height == config.window_height_mobile_2):
-        pytest.skip("Тест только для Desktop")
+        pytest.skip(reason="Тест только для Desktop")
     with allure.step("Open auth page"):
         main_page.open_page()
     with allure.step("Click sign in"):
@@ -55,7 +55,7 @@ def test_github_mobile(browser_management):
             browser.config.window_height == config.window_height_desktop_1) or (
             browser.config.window_width == config.window_width_desktop_2 and
             browser.config.window_height == config.window_height_desktop_2):
-        pytest.skip("Тест только для Mobile")
+        pytest.skip(reason="Тест только для Mobile")
     with allure.step("Open auth page"):
         main_page.open_page()
     with allure.step("Open burger menu"):
